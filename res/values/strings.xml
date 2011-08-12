@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="edit_this_score">Edit this score</string>
+    <string name="delete_this_score">Delete this score</string>
     <string name="hello">Hello World, ScoresListActivity!</string>
     <string name="app_name">High Scores</string>
     <string name="add_score">Add Score</string>

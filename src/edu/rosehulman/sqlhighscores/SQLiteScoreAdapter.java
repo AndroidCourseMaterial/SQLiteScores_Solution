@@ -109,6 +109,14 @@ public class SQLiteScoreAdapter {
 		return s;
 	}
 	
+	public Score getScore(long id) {		
+		Cursor c = mDb.query(TABLE_NAME, new String[] { ID_KEY, NAME_KEY, SCORE_KEY },
+				ID_KEY + " = ?", new String[] { Integer.toString((int)id) }, 
+				null, null, ID_KEY + " DESC", "1");
+		c.moveToFirst();
+		return getScoreFromCursor(c);
+	}
+	
 	/**
 	 * Adds a score (which has no _id) to the database.  
 	 * Returns the score that is in the database (which has an _id)
@@ -119,17 +127,19 @@ public class SQLiteScoreAdapter {
 	public Score addScore(Score s) {
 		ContentValues rowValues = getContentValuesFromScore(s);
 		mDb.insert(TABLE_NAME, null, rowValues);
-		
 		Cursor c = mDb.query(TABLE_NAME, new String[] { ID_KEY, NAME_KEY, SCORE_KEY },
 				null, null, null, null, ID_KEY + " DESC", "1");
 		c.moveToFirst();
 		return getScoreFromCursor(c);
 	}
 	
-	// CONSIDER: Add an update method
+	public void updateScore(long id, Score s) {
+		ContentValues rowValues = getContentValuesFromScore(s);
+		mDb.update(TABLE_NAME, rowValues, ID_KEY + " = ?", new String[] { Integer.toString((int)id) });
+	}
 	
-	public void removeScore(int id) {
-		mDb.delete(TABLE_NAME, ID_KEY + " = ?", new String[] { Integer.toString(id) });
+	public void removeScore(long id) {
+		mDb.delete(TABLE_NAME, ID_KEY + " = ?", new String[] { Integer.toString((int)id) });
 	}
 	
 	public void removeScore(Score s) {
