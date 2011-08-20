@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="delete">Delete </string>
+	<string name="no_scores_message">Add scores via menu</string>
+	<string name="update">Update</string>
+	<string name="score_title">Score:</string>
+	<string name="name_title">Name:</string>
+	<string name="cancel">Cancel</string>
+	<string name="add">Add</string>
+	<string name="edit_score">Edit score</string>
+	<string name="delete_score">Delete score</string>
+	<string name="app_name">SQLite Scores</string>
+	<string name="add_score">Add score</string>
+	<string name="update_score">Update score</string>
+</resources>
