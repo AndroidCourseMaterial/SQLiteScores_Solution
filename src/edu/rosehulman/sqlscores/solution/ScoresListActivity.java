@@ -1,4 +1,4 @@
-package edu.rosehulman.sqlhighscores;
+package edu.rosehulman.sqlscores.solution;
 
 import android.app.Dialog;
 import android.app.ListActivity;
@@ -13,8 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView.AdapterContextMenuInfo;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;

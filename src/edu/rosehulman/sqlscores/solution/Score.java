@@ -1,4 +1,4 @@
-package edu.rosehulman.sqlhighscores;
+package edu.rosehulman.sqlscores.solution;
 
 /**
  * Our score data object.
